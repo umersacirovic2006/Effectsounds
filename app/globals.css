@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+    @apply font-semibold text-primary hover:invert hover:transition-[ease-in-out];
+}
+
+.btn-primary:hover{
+    transition: 0.2s ease-in-out;
+}
+
+.btn-secondary {
+    @apply px-7 border border-solid border-neutral bg-neutral rounded-full font-semibold text-secondary hover:invert transition-[ease-in-out];
+}
+
+.btn-secondary:hover{
+    transition: 0.2s ease-in-out;
+}
+
+.rec-card {
+    @apply flex justify-center items-center h-40 rounded-xl bg-cover;
+}
+
+.dropdown {
+    @apply flex justify-center items-center gap-80 bg-accent border border-accent p-4 rounded-2xl hover:border-red-200 hover:border;
+    transition: 0.2s ease-in-out;
+}
