@@ -18,14 +18,6 @@ const Dropdown = ({ data }: DataType) => {
         setIsOpen((prevState) => !prevState);
     };
 
-    const on = {
-        display: "block",
-    };
-
-    const off = {
-        display: "none",
-    };
-
     return (
         <div className="flex justify-center items-center flex-col">
             <button className="dropdown" onClick={stateHandler}>
@@ -33,19 +25,9 @@ const Dropdown = ({ data }: DataType) => {
                 {isOpen ? <ArrowDown /> : <ArrowUp />}
             </button>
             <motion.p
-                transition={{ duration: 0.5 }}
-                initial={{
-                    opacity: 0,
-                    display: "none",
-                }}
-                animate={{
-                    opacity: isOpen ? 1 : 0,
-                    display: isOpen ? "block" : "none",
-                }}
-                style={isOpen ? on : off}
                 className={`text-sm w-7/12 px-32
                 ${isOpen ? "py-4" : "py-0"}
-                ${isOpen ? "" : "!hidden"}`}
+                ${isOpen ? "!block" : "!hidden"}`}
             >
                 {data.answer}
             </motion.p>

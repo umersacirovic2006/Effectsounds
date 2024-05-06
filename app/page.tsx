@@ -1,4 +1,3 @@
-import './_assets/globals.scss'
 import HomePage from './_components/home';
 
 
