@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -34,18 +35,18 @@ const Header = () => {
                             />
                         </svg>
                     </button>
-                    <button className="btn-primary">
+                    <Link href='/pricing' className="btn-primary flex justify-center items-center">
                         <p>Pricing</p>
-                    </button>
+                    </Link>
                     <button className="btn-primary">
                         <p>FAQ</p>
                     </button>
-                    <button className="btn-primary">
-                        <p>Sign in</p>
-                    </button>
-                    <button className="btn-secondary">
-                        <p>Log in</p>
-                    </button>
+                    <Link href="?showDialog=y"  className="btn-primary flex justify-center items-center">
+                        Sign in
+                    </Link>
+                    <Link href="?showDialog=y"  className="btn-secondary flex justify-center items-center">
+                        Log in
+                    </Link>
                 </div>
             </div>
         </nav>
