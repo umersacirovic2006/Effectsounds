@@ -6,7 +6,7 @@
     @apply font-semibold text-primary hover:invert hover:transition-[ease-in-out];
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     transition: 0.2s ease-in-out;
 }
 
@@ -14,7 +14,7 @@
     @apply px-7 border border-solid border-neutral bg-neutral rounded-full font-semibold text-secondary hover:invert transition-[ease-in-out];
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
     transition: 0.2s ease-in-out;
 }
 
@@ -25,4 +25,16 @@
 .dropdown {
     @apply flex justify-center items-center gap-80 bg-accent border border-accent p-4 rounded-2xl hover:border-red-200 hover:border;
     transition: 0.2s ease-in-out;
+}
+
+.syne {
+    font-family: var(--syne);
+}
+
+.lato {
+    font-family: var(--lato);
+}
+
+.inter {
+    font-family: var(--inter);
 }
