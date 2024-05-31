@@ -11,7 +11,7 @@ type Props = {
     onOk: () => void;
 };
 
-export default function Dialog({ title1, title2, onClose, onOk }: Props) {
+export default function Dialog({ onClose, onOk }: Props) {
     const searchParams = useSearchParams();
     const dialogRef = useRef<null | HTMLDialogElement>(null);
     const showDialog = searchParams.get("showDialog");
@@ -28,6 +28,7 @@ export default function Dialog({ title1, title2, onClose, onOk }: Props) {
     const closeDialog = () => {
         dialogRef.current?.close();
         router.back();
+        router.refresh();
         onClose();
     };
 
@@ -133,13 +134,32 @@ export default function Dialog({ title1, title2, onClose, onOk }: Props) {
                     </div> */}
 
                     <div className="p-5 bg-primary flex flex-col items-center gap-8">
-                        <h1 className="p-5 font-semibold text-center text-secondary syne">Create an account</h1>
+                        <h1 className="p-5 font-semibold text-center text-secondary syne">
+                            Create an account
+                        </h1>
                         <div className="flex flex-col gap-2">
-                            <input type="text" placeholder="Email" className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm" />
-                            <input type="text" placeholder="Create password" className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm" />
-                            <input type="text" placeholder="Confirm email adress" className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm" />
+                            <input
+                                type="text"
+                                placeholder="Email"
+                                className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Create password"
+                                className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Confirm email adress"
+                                className="p-2 border border-secondary hover:border-neutral rounded-xl bg-primary h-1/2 placeholder:text-sm"
+                            />
                         </div>
-                        <button className="btn-secondary syne mb-10" onClick={closeDialog}>Create account</button>
+                        <button
+                            className="btn-secondary syne mb-10"
+                            onClick={closeDialog}
+                        >
+                            Create account
+                        </button>
                     </div>
                 </div>
             </dialog>
