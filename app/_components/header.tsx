@@ -59,16 +59,16 @@ const Header = () => {
                         Pricing
                     </Link>
                     <Link
-                        href="/faq"
+                        href="#faq"
                         className="btn-primary flex justify-center items-center"
                     >
                         FAQ
                     </Link>
                     <Link
-                        href="?showDialog=y"
+                        href="?showSignUpDialog=y"
                         className="btn-primary flex justify-center items-center"
                     >
-                        Sign in
+                        Sign up
                     </Link>
                     <Link
                         href="?showDialog=y"

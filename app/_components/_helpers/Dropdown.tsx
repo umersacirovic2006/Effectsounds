@@ -19,13 +19,13 @@ const Dropdown = ({ data }: DataType) => {
     };
 
     return (
-        <div className="flex justify-center items-center flex-col">
-            <button className="dropdown" onClick={stateHandler}>
+        <div className="flex justify-center items-center flex-col w-3/4 inter">
+            <button className="dropdown w-3/4" onClick={stateHandler}>
                 <h3>{data.question}</h3>
                 {isOpen ? <ArrowDown /> : <ArrowUp />}
             </button>
             <motion.p
-                className={`text-sm w-7/12 px-32
+                className={`text-sm w-9/12 px-4
                 ${isOpen ? "py-4" : "py-0"}
                 ${isOpen ? "!block" : "!hidden"}`}
             >

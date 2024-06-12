@@ -9,19 +9,19 @@ type Props = {
     onOk: () => void;
 };
 
-export default function Dialog({ onClose }: Props) {
+export default function SignUpDialog({ onClose }: Props) {
     const searchParams = useSearchParams();
     const dialogRef = useRef<null | HTMLDialogElement>(null);
-    const showDialog = searchParams.get("showDialog");
+    const showSignUpDialog = searchParams.get("showSignUpDialog");
     const router = useRouter();
 
     useEffect(() => {
-        if (showDialog === "y") {
+        if (showSignUpDialog === "y") {
             dialogRef.current?.showModal();
         } else {
             dialogRef.current?.close();
         }
-    }, [showDialog]);
+    }, [showSignUpDialog]);
 
     const closeDialog = () => {
         dialogRef.current?.close();
@@ -31,16 +31,16 @@ export default function Dialog({ onClose }: Props) {
     };
 
     const dialog: JSX.Element | null =
-        showDialog === "y" ? (
+        showSignUpDialog === "y" ? (
             <dialog
                 ref={dialogRef}
                 className="fixed bg-primary top-50 left-50 -translate-x-50 -translate-y-50 z-10 rounded-xl backdrop:bg-gray-800/50"
             >
                 <div className="bg-primary flex flex-col justify-between">
                     <div className="py-5 px-5 w-full bg-primary flex flex-col items-center gap-8">
-                    <div className="flex justify-between w-3/4">
+                        <div className="flex justify-between w-3/4">
                             <h1 className="py-5 font-semibold text-center text-secondary syne">
-                                Log in
+                                Create an account
                             </h1>
                             <button className="text-error syne" onClick={() => router.push('?')}>x</button>
                         </div>
@@ -55,19 +55,29 @@ export default function Dialog({ onClose }: Props) {
                                 placeholder="Create password"
                                 className="p-2 w-80 border border-secondary hover:border-neutral rounded-3xl bg-primary h-1/2 placeholder:text-sm"
                             />
+                            <input
+                                type="text"
+                                placeholder="Confirm password"
+                                className="p-2 w-80 border border-secondary hover:border-neutral rounded-3xl bg-primary h-1/2 placeholder:text-sm"
+                            />
                         </div>
                         <button
                             className="btn-secondary syne mb-1 py-3"
                             onClick={closeDialog}
                         >
-                            Log in
+                            Create account
                         </button>
                         <p>
-                            Dont have an account?{" "}
-                            <button className="text-blue-400" onClick={() => {
-                                onClose()
-                                router.push('?showSignUpDialog=y')
-                            }}>Sign Up</button>
+                            Got an account?{" "}
+                            <button
+                                className="text-blue-600"
+                                onClick={() => {
+                                    onClose();
+                                    router.push("?showDialog=y");
+                                }}
+                            >
+                                Log In
+                            </button>
                         </p>
                     </div>
                 </div>

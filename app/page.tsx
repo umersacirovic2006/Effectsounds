@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Dialog from "./_components/_helpers/Dialog";
 import HomePage from "./_components/home";
+import SignUpDialog from "./_components/_helpers/SignUpDialog";
 
 export default function Home() {
     async function useClose() {
@@ -18,8 +19,10 @@ export default function Home() {
             <HomePage />
             <Suspense>
                 <Dialog
-                    title1="Create an account"
-                    title2="Login"
+                    onClose={useClose}
+                    onOk={onOk}
+                />
+                <SignUpDialog
                     onClose={useClose}
                     onOk={onOk}
                 />

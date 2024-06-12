@@ -43,19 +43,19 @@ const Footer = () => {
                 <div>
                     <p className="text-neutral py-5 syne">Categories</p>
                     <div className="gap-2 flex flex-col text-primary lato">
-                        <button className="btn-primary text-left">
+                        <Link href='/category' className="btn-primary text-left">
                             Ambient
-                        </button>
-                        <button className="btn-primary text-left">
+                        </Link>
+                        <Link href='/category' className="btn-primary text-left">
                             Medieval
-                        </button>
-                        <button className="btn-primary text-left">
+                        </Link>
+                        <Link href='/category' className="btn-primary text-left">
                             Explosion
-                        </button>
-                        <button className="btn-primary text-left">
+                        </Link>
+                        <Link href='/category' className="btn-primary text-left">
                             Swoosh
-                        </button>
-                        <button className="btn-primary text-left">Guns</button>
+                        </Link>
+                        <Link href='/category' className="btn-primary text-left">Guns</Link>
                     </div>
                 </div>
                 <div>
