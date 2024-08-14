@@ -1,18 +1,14 @@
 import React from "react";
-import { ArrowRight } from "../_assets/_svgs/svgs";
-import Link from "next/link";
+import Search from "./Search";
 
-const Catagories = () => {
+const AllCategories = () => {
     return (
         <div className="w-full flex flex-col justify-center gap-6 py-10">
-            <div className="px-80 lg:px-96 flex justify-between">
+            <div className="px-80 lg:px-96 flex justify-between items-center">
                 <h2 className="text-secondary text-xl font-bold syne">
-                    Recommended Categories
+                    Categories
                 </h2>
-                <Link href='/categories' className="flex items-center gap-6">
-                    <p className="syne text-xl font-bold">Categories</p>
-                    <ArrowRight />
-                </Link>
+                <Search />
             </div>
             <div className="grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2,1fr)] gap-2 px-80 lg:px-96 w-full h-full">
                 <div className="rec-card bg-[url(/rain.png)]">
@@ -38,4 +34,4 @@ const Catagories = () => {
     );
 };
 
-export default Catagories;
+export default AllCategories;

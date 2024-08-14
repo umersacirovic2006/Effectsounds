@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Start = () => {
@@ -7,9 +8,9 @@ const Start = () => {
                 Get access to thousands of <br></br>
                 high-quality sound effects today!
             </h1>
-            <button className="px-7 py-2 border border-solid border-neutral bg-neutral rounded-full font-semibold text-secondary hover:invert transition-[ease-in-out] syne">
+            <Link href="?showSignUpDialog=y" className="px-7 py-2 border border-solid border-neutral bg-neutral rounded-full font-semibold text-secondary hover:invert transition-[ease-in-out] syne">
                 Start NOW
-            </button>
+            </Link>
         </div>
     );
 };

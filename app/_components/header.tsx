@@ -7,7 +7,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="bg-secondary flex justify-center items-center">
+        <nav className="bg-secondary pb-4 flex justify-center items-center">
             <div className="w-3/5 flex justify-between items-center pt-4">
                 <Link href="/">
                     <svg
@@ -28,7 +28,7 @@ const Header = () => {
                     {open ? (
                         <input
                             placeholder="Search"
-                            className="bg-transparent placeholder:opacity-15 w-full placeholder:text-white border-b border-opacity-15 border-white"
+                            className="bg-transparent placeholder:opacity-50 w-full placeholder:text-white border-b border-opacity-15 border-white"
                             onBlur={() => setOpen((prevState) => !prevState)}
                         />
                     ) : (

@@ -1,11 +1,12 @@
 import React from "react";
+import RecCategories from "./_helpers/RecCatagories";
+import AllCategories from "./_helpers/AllCatagories";
 
 const Categories = () => {
     return (
         <div>
-            Hello and welcome to the newest page to be created in this very
-            moment. Oh wait... maybe somewhere in the world someone has created
-            an even newer one. Or maybe someone an even newer one than that ;-;
+            <RecCategories />
+            <AllCategories />
         </div>
     );
 };

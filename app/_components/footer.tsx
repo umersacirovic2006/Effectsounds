@@ -11,7 +11,9 @@ const Footer = () => {
                         <button className="btn-primary text-left">
                             Sound effects
                         </button>
-                        <button className="btn-primary text-left">FAQ</button>
+                        <Link href="#faq" className="btn-primary text-left">
+                            FAQ
+                        </Link>
                         <Link href="/pricing" className="btn-primary text-left">
                             Pricing
                         </Link>
@@ -43,19 +45,36 @@ const Footer = () => {
                 <div>
                     <p className="text-neutral py-5 syne">Categories</p>
                     <div className="gap-2 flex flex-col text-primary lato">
-                        <Link href='/category' className="btn-primary text-left">
+                        <Link
+                            href="/category"
+                            className="btn-primary text-left"
+                        >
                             Ambient
                         </Link>
-                        <Link href='/category' className="btn-primary text-left">
+                        <Link
+                            href="/category"
+                            className="btn-primary text-left"
+                        >
                             Medieval
                         </Link>
-                        <Link href='/category' className="btn-primary text-left">
+                        <Link
+                            href="/category"
+                            className="btn-primary text-left"
+                        >
                             Explosion
                         </Link>
-                        <Link href='/category' className="btn-primary text-left">
+                        <Link
+                            href="/category"
+                            className="btn-primary text-left"
+                        >
                             Swoosh
                         </Link>
-                        <Link href='/category' className="btn-primary text-left">Guns</Link>
+                        <Link
+                            href="/category"
+                            className="btn-primary text-left"
+                        >
+                            Guns
+                        </Link>
                     </div>
                 </div>
                 <div>

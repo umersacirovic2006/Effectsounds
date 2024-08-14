@@ -1,5 +1,6 @@
 "use client";
 
+import { CloseX } from "@/app/_assets/_svgs/svgs";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useRef, useEffect } from "react";
@@ -38,11 +39,18 @@ export default function SignUpDialog({ onClose }: Props) {
             >
                 <div className="bg-primary flex flex-col justify-between">
                     <div className="py-5 px-5 w-full bg-primary flex flex-col items-center gap-8">
-                        <div className="flex justify-between w-3/4">
+                        <div className="flex flex-col justify-between items-center w-full">
+                            <div className="flex justify-end w-full">
+                                <button
+                                    className="w-3 h-3 flex justify-center items-center"
+                                    onClick={() => router.push("?")}
+                                >
+                                    <CloseX />
+                                </button>
+                            </div>
                             <h1 className="py-5 font-semibold text-center text-secondary syne">
                                 Create an account
                             </h1>
-                            <button className="text-error syne" onClick={() => router.push('?')}>x</button>
                         </div>
                         <div className="flex flex-col w-full gap-2">
                             <input
